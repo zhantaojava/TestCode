@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+tr td{border: solid 1px red;}
+</style>
+<script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+<table id="main">
+ 
+</table>
+<script type="text/javascript">
+var arr = '{"red":{"id":1,"name":"mary"},"blue":{"id":2,"name":"u71d5u5b50"}}';//u71d5u5b50这个是php中自动转换的
+var dataObj = eval_r("("+arr+")");//这里要加上加好括号和双引号的原因我也不知道，就当是json语法，只能死记硬背了
+  $.each(dataObj,function(idx,item){  
+   //输出 
+   alert(item.id+"哈哈"+item.name); 
+   var html="<tr><td>"+"id:"+"</td><td>"+dataObj[idx].id+"</td><td>"+"name:</td><td>"+dataObj[idx].name+"</td></tr>";
+ $("#main").html(html);
+})
+</script>
+<!--  另外一种读取方法 -->
+<!--
+<script type="text/javascript">
+var d1 =[{"text":"王家湾","value":"9"},{"text":"李家湾","value":"10"},{"text":"邵家湾","value":"13"}];
+$(d1).each(function(){
+alert(this.text+" "+this.value);
+});
+</script>
+ 
+-->
+</script>
+</body>
+</html>
