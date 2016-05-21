@@ -7,8 +7,15 @@ public class DayOfMonthApp {
 		
 		String str= Feb.getDes();
 		
-		System.out.println(     );
+		System.out.println(Feb.getDays());
 		System.out.println(Feb.getDes());
+		System.out.println(str);
+		
+		
+		boolean compareEnumObject;
+		
+		compareEnumObject=DayOfMonth.April.equals(Feb);
+		System.out.println(compareEnumObject);
 	}
 
 }
